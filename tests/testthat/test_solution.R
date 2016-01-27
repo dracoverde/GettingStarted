@@ -1,9 +1,10 @@
-test_that("GetFromTreeBase_solution",{
-	expect_is(GetFromTreeBase_solution(), "phylo")
+test_that("GetHowManyTrees_solution",{
+	expect_equal(GetHowManyTrees_solution(), 34459425)
 })
 
-test_that("GetTreeFromOpenTree_solution",{
-	opentree.result <- GetTreeFromOpenTree_solution()
-	expect_is(opentree.result[[1]], "phylo")
-	expect_is(opentree.result[[2]], "phylo")
+test_that("GetAlignment_solution",{
+	library(ape)
+	data(woodmouse)
+	alignment <- GetAlignment_solution()
+	expect_equal(dim(alignment)[2], dim(woodmouse)[2])
 })

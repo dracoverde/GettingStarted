@@ -1,2 +1,2 @@
 library(testthat)
-test_check("PhyloMethGetTrees")
+test_check("GettingStarted")
